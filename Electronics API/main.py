@@ -30,7 +30,7 @@ if __name__ == '__main__':
     headers = read_file('electronics_products.json')[0].keys()
 
     # Prepare file for writing
-    with open('result.csv', 'w', encoding='utf8') as result_file:
+    with open('result.csv', 'w', encoding='utf8', newline='') as result_file:
         writer = csv.DictWriter(result_file, fieldnames=headers)
         writer.writeheader()
         for line in read_file('electronics_products.json'):
